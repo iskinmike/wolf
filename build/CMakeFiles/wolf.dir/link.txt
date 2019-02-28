@@ -1,0 +1,1 @@
+/usr/bin/c++    --std=c++11 -g   CMakeFiles/wolf.dir/src/main.cpp.o CMakeFiles/wolf.dir/src/world.cpp.o  -o wolf -rdynamic -lSDL2 -lpthread 

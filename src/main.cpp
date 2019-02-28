@@ -18,12 +18,13 @@ int main(int argc, char const *argv[])
 
 
     std::thread world_thread = std::thread([](){
-        world_construction_token&& world_token = world::construct_token("Wolf", 100, 100, 640, 480);
-        std::cout << "[" << world_token.error << "]" << std::endl;
+        world_construction_token&& world_token = world::construct_token("Wolf", 100, 100, 1280, 480);
+//        std::cout << "[" << world_token.error << "]" << std::endl;
         if (world_token.error.empty()) {
             world test_world(std::move(world_token));
-            test_world.run_loop();
-            sleep(3);
+//            test_world.run_loop();
+//            sleep(6);
+            test_world.start_loop();
         }
     });
 

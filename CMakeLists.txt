@@ -23,6 +23,10 @@ set(SOURCES
     src/preconstruction_class.hpp
     src/world.hpp
     src/world.cpp
+    src/color.hpp
+    src/game_field.hpp
+    src/player.hpp
+    src/view_screen.hpp
 )
 
 set(LIBS
@@ -35,6 +39,6 @@ add_executable(${PROJECT_NAME} ${SOURCES})
 
 target_link_libraries ( ${PROJECT_NAME} ${LIBS})
 
-# target_include_directories ( ${PROJECT_NAME} BEFORE PRIVATE
-#         $ENV{WILTON_HOME}/devel/include
-# )
+target_include_directories ( ${PROJECT_NAME} BEFORE PRIVATE
+     ${CMAKE_SOURCE_DIR}
+)
